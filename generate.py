@@ -15,11 +15,14 @@ def generate_mywebsite_conf(num_redirects):
     redirects.append('RewriteRule ^(.*)$ https://example.de/$1 [R=301,L]')
     conf_content = '\n'.join(redirects)
 
-    with open('mywebsite.conf', 'w') as file:
+    with open(f'mywebsite_{num_redirects}.conf', 'w') as file:
+
         file.write(conf_content)
 
 # Specify the number of random redirects you want
 num_redirects = 550000
 
 # Generate the mywebsite.conf file
-generate_mywebsite_conf(num_redirects)
+generate_mywebsite_conf(100)
+generate_mywebsite_conf(300000)
+generate_mywebsite_conf(550000)
