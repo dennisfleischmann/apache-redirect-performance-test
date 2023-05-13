@@ -19,7 +19,7 @@ def generate_mywebsite_conf(num_redirects):
         file.write(conf_content)
 
 # Specify the number of random redirects you want
-num_redirects = 600000
+num_redirects = 550000
 
 # Generate the mywebsite.conf file
 generate_mywebsite_conf(num_redirects)
