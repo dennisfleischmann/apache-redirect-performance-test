@@ -4,8 +4,8 @@ import string
 def generate_random_redirects(num_redirects):
     redirects = []
     for _ in range(num_redirects):
-        source = ''.join(random.choice(string.ascii_lowercase) for _ in range(10))
-        target = ''.join(random.choice(string.ascii_lowercase) for _ in range(10))
+        source = ''.join(random.choice(string.ascii_lowercase) for _ in range(64))
+        target = ''.join(random.choice(string.ascii_lowercase) for _ in range(64))
         redirect = f'RewriteRule ^/{source}$ https://example.de/{target} [R=301,L]'
         redirects.append(redirect)
     return redirects
